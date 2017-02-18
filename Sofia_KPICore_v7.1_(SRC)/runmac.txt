@@ -1,0 +1,12 @@
+java -jar org.eclipse.osgi_3.7.2.v20120110-1415.jar -console
+
+in
+
+/Users/Andraghetti/Dropbox/Relazione/Interoperability/OSGI_SIB_v3_2/OSGI_SIB_v3_2/
+
+
+poi in /Users/Andraghetti/Dropbox/Relazione/Interoperability/Sofia_KPICore_v7.1_(SRC)/
+
+fai 
+
+java -cp .:jdom-2.0.5.jar:sofia_kp.jar:lib/jdom-2.0.5.jar  sofia_kp.KP_GUI

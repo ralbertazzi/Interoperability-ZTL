@@ -1,0 +1,7 @@
+package Model;
+
+import java.util.Vector;
+
+public interface SibSerializable {
+	public Vector<String> toTriple();
+}

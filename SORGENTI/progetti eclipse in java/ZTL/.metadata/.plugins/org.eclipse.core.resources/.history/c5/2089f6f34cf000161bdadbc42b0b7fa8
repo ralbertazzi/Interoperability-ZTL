@@ -1,0 +1,7 @@
+package Model;
+
+public class OntologyProvider {
+	public static String toTripleFormat(String param){
+		return "http://ztl#"+param;
+	}
+}

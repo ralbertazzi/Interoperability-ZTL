@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="lib" path="/Users/alessandroberlati/Desktop/Initializer_lib/collection-0.6.jar"/>
+	<classpathentry kind="lib" path="/Users/alessandroberlati/Desktop/Initializer_lib/commons-cli-1.3.jar"/>
+	<classpathentry kind="lib" path="/Users/alessandroberlati/Desktop/Initializer_lib/commons-codec-1.10.jar"/>
+	<classpathentry kind="lib" path="/Users/alessandroberlati/Desktop/Initializer_lib/commons-csv-1.3.jar"/>
+	<classpathentry kind="lib" path="/Users/alessandroberlati/Desktop/Initializer_lib/commons-io-2.5.jar"/>
+	<classpathentry kind="lib" path="/Users/alessandroberlati/Desktop/Initializer_lib/commons-lang3-3.4.jar"/>
+	<classpathentry kind="lib" path="/Users/alessandroberlati/Desktop/Initializer_lib/httpclient-4.5.2.jar"/>
+	<classpathentry kind="lib" path="/Users/alessandroberlati/Desktop/Initializer_lib/httpclient-cache-4.5.2.jar"/>
+	<classpathentry kind="lib" path="/Users/alessandroberlati/Desktop/Initializer_lib/httpcore-4.4.4.jar"/>
+	<classpathentry kind="lib" path="/Users/alessandroberlati/Desktop/Initializer_lib/jackson-annotations-2.7.0.jar"/>
+	<classpathentry kind="lib" path="/Users/alessandroberlati/Desktop/Initializer_lib/jackson-core-2.7.4.jar"/>
+	<classpathentry kind="lib" path="/Users/alessandroberlati/Desktop/Initializer_lib/jackson-databind-2.7.4.jar"/>
+	<classpathentry kind="lib" path="/Users/alessandroberlati/Desktop/Initializer_lib/jcl-over-slf4j-1.7.21.jar"/>
+	<classpathentry kind="lib" path="/Users/alessandroberlati/Desktop/Initializer_lib/jena-arq-3.2.0.jar"/>
+	<classpathentry kind="lib" path="/Users/alessandroberlati/Desktop/Initializer_lib/jena-base-3.2.0.jar"/>
+	<classpathentry kind="lib" path="/Users/alessandroberlati/Desktop/Initializer_lib/jena-cmds-3.2.0.jar"/>
+	<classpathentry kind="lib" path="/Users/alessandroberlati/Desktop/Initializer_lib/jena-core-3.2.0.jar"/>
+	<classpathentry kind="lib" path="/Users/alessandroberlati/Desktop/Initializer_lib/jena-iri-3.2.0.jar"/>
+	<classpathentry kind="lib" path="/Users/alessandroberlati/Desktop/Initializer_lib/jena-rdfconnection-3.2.0.jar"/>
+	<classpathentry kind="lib" path="/Users/alessandroberlati/Desktop/Initializer_lib/jena-shaded-guava-3.2.0.jar"/>
+	<classpathentry kind="lib" path="/Users/alessandroberlati/Desktop/Initializer_lib/jena-tdb-3.2.0.jar"/>
+	<classpathentry kind="lib" path="/Users/alessandroberlati/Desktop/Initializer_lib/jsonld-java-0.9.0.jar"/>
+	<classpathentry kind="lib" path="/Users/alessandroberlati/Desktop/Initializer_lib/libthrift-0.9.3.jar"/>
+	<classpathentry kind="lib" path="/Users/alessandroberlati/Desktop/Initializer_lib/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="/Users/alessandroberlati/Desktop/Initializer_lib/slf4j-api-1.7.21.jar"/>
+	<classpathentry kind="lib" path="/Users/alessandroberlati/Desktop/Initializer_lib/slf4j-log4j12-1.7.21.jar"/>
+	<classpathentry kind="lib" path="/Users/alessandroberlati/Desktop/Initializer_lib/xercesImpl-2.11.0.jar"/>
+	<classpathentry kind="lib" path="/Users/alessandroberlati/Desktop/Initializer_lib/xml-apis-1.4.01.jar"/>
+	<classpathentry kind="lib" path="/Users/alessandroberlati/Dropbox/Relazione/JAR_IOES/jdom-2.0.5.jar"/>
+	<classpathentry kind="lib" path="/Users/alessandroberlati/Dropbox/Relazione/JAR_IOES/ztlModel.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

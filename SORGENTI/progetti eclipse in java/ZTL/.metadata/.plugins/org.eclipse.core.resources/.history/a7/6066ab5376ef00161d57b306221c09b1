@@ -1,0 +1,56 @@
+package impl;
+
+import java.util.Vector;
+
+public class Pass implements SibSerializable {
+
+	private long deadline;
+	private long ticket;
+	private long type;
+
+	public Pass() {
+		super();
+	}
+
+	public Pass(long deadline, long ticket, long type) {
+		super();
+		this.deadline = deadline;
+		this.ticket = ticket;
+		this.type = type;
+	}
+
+	@Override
+	public String toString() {
+		return "Pass [deadline=" + deadline + ", ticket=" + ticket + ", type=" + type + "]";
+	}
+
+	public long getDeadline() {
+		return deadline;
+	}
+
+	public void setDeadline(long deadline) {
+		this.deadline = deadline;
+	}
+
+	public long getTicket() {
+		return ticket;
+	}
+
+	public void setTicket(long ticket) {
+		this.ticket = ticket;
+	}
+
+	public long getType() {
+		return type;
+	}
+
+	public void setType(long type) {
+		this.type = type;
+	}
+
+	public Vector<String> toTriple() {
+		// TODO serialization method -> RICORDA CHE RICORSIVAMENTE DEVE INVOCARE
+		// LA toTriple() dei campi non literal
+		throw new IllegalArgumentException("not implemented yet");
+	}
+}

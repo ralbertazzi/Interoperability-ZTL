@@ -1,0 +1,72 @@
+package Model;
+
+import java.util.Vector;
+
+public class Person implements SibSerializable {
+
+	private String fiscalCode;
+	private String name;
+	private String surname;
+	private String address;
+	private String email;
+	private Vehicle vehicle;
+	
+	public Person(String fiscalCode, String name, String surname, String address, String email, Vehicle vehicle) {
+		super();
+		this.fiscalCode = fiscalCode;
+		this.name = name;
+		this.surname = surname;
+		this.address = address;
+		this.email = email;
+		this.vehicle = vehicle;
+	}
+	public Person() {
+		super();
+	}
+	public String getFiscalCode() {
+		return fiscalCode;
+	}
+	public void setFiscalCode(String fiscalCode) {
+		this.fiscalCode = fiscalCode;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getSurname() {
+		return surname;
+	}
+	public void setSurname(String surname) {
+		this.surname = surname;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public Vehicle getVehicle() {
+		return vehicle;
+	}
+	public void setVehicle(Vehicle vehicle) {
+		this.vehicle = vehicle;
+	}
+	@Override
+	public String toString() {
+		return "Person [fiscalCode=" + fiscalCode + ", name=" + name + ", surname=" + surname + ", address=" + address
+				+ ", email=" + email + ", vehicle=" + vehicle + "]";
+	}
+	public Vector<Vector<String>> toTriple(){
+		Vector<Vector<String>> triples = new Vector<Vector<String>>();
+		return triples;
+	}
+	
+}

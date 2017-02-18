@@ -1,0 +1,288 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://ztl#"
+     xml:base="http://ztl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://ztl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ztl#hasPass -->
+
+    <owl:ObjectProperty rdf:about="http://ztl#hasPass">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://ztl#Vehicle"/>
+        <rdfs:range rdf:resource="http://ztl#Pass"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ztl#hasTargetPerson -->
+
+    <owl:ObjectProperty rdf:about="http://ztl#hasTargetPerson">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://ztl#Fine"/>
+        <rdfs:range rdf:resource="http://ztl#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ztl#hasTargetSensor -->
+
+    <owl:ObjectProperty rdf:about="http://ztl#hasTargetSensor">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://ztl#Fine"/>
+        <rdfs:range rdf:resource="http://ztl#Sensor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ztl#hasTargetVehicle -->
+
+    <owl:ObjectProperty rdf:about="http://ztl#hasTargetVehicle">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://ztl#Fine"/>
+        <rdfs:range rdf:resource="http://ztl#Vehicle"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ztl#hasVehicle -->
+
+    <owl:ObjectProperty rdf:about="http://ztl#hasVehicle">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://ztl#Person"/>
+        <rdfs:range rdf:resource="http://ztl#Vehicle"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ztl#fineHasId -->
+
+    <owl:DatatypeProperty rdf:about="http://ztl#fineHasId">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://ztl#Fine"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ztl#hasAddress -->
+
+    <owl:DatatypeProperty rdf:about="http://ztl#hasAddress">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://ztl#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ztl#hasAmount -->
+
+    <owl:DatatypeProperty rdf:about="http://ztl#hasAmount">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://ztl#Fine"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ztl#hasCategory -->
+
+    <owl:DatatypeProperty rdf:about="http://ztl#hasCategory">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://ztl#Vehicle"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ztl#hasDeadline -->
+
+    <owl:DatatypeProperty rdf:about="http://ztl#hasDeadline">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://ztl#Pass"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ztl#hasDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://ztl#hasDescription">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://ztl#Fine"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ztl#hasEmail -->
+
+    <owl:DatatypeProperty rdf:about="http://ztl#hasEmail">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://ztl#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ztl#hasFiscalCode -->
+
+    <owl:DatatypeProperty rdf:about="http://ztl#hasFiscalCode">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://ztl#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ztl#hasName -->
+
+    <owl:DatatypeProperty rdf:about="http://ztl#hasName">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://ztl#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ztl#hasPlate -->
+
+    <owl:DatatypeProperty rdf:about="http://ztl#hasPlate">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://ztl#Vehicle"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ztl#hasSurname -->
+
+    <owl:DatatypeProperty rdf:about="http://ztl#hasSurname">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://ztl#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ztl#hasTicket -->
+
+    <owl:DatatypeProperty rdf:about="http://ztl#hasTicket">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://ztl#Pass"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ztl#hasTimestamp -->
+
+    <owl:DatatypeProperty rdf:about="http://ztl#hasTimestamp">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://ztl#Sensor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ztl#hasType -->
+
+    <owl:DatatypeProperty rdf:about="http://ztl#hasType">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://ztl#Pass"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ztl#sensorHasId -->
+
+    <owl:DatatypeProperty rdf:about="http://ztl#sensorHasId">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://ztl#Sensor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ztl#sensorHasPlate -->
+
+    <owl:DatatypeProperty rdf:about="http://ztl#sensorHasPlate">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://ztl#Sensor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ztl#Fine -->
+
+    <owl:Class rdf:about="http://ztl#Fine"/>
+    
+
+
+    <!-- http://ztl#Pass -->
+
+    <owl:Class rdf:about="http://ztl#Pass"/>
+    
+
+
+    <!-- http://ztl#Person -->
+
+    <owl:Class rdf:about="http://ztl#Person"/>
+    
+
+
+    <!-- http://ztl#Sensor -->
+
+    <owl:Class rdf:about="http://ztl#Sensor"/>
+    
+
+
+    <!-- http://ztl#Vehicle -->
+
+    <owl:Class rdf:about="http://ztl#Vehicle"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+

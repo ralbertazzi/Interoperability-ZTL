@@ -1,0 +1,45 @@
+package impl;
+
+import java.util.Vector;
+
+import sofia_kp.KPICore;
+import sofia_kp.SIBResponse;
+
+public class InitializerMain {
+
+	public static void main(String[] args) {
+		System.out.println("Initializer started...");
+		
+		KPICore kpiCore = new KPICore("localhost", 7702, "ztl");
+		SIBResponse resp = null;
+		
+		resp = kpiCore.join();
+		if(!resp.isConfirmed()){
+			System.err.println("Error joining the SIB");
+			System.exit(-1);
+		}
+		
+		
+		
+		//TODO creare un centinaio di coppie persona-veicolo, generare le triple con toTriple()
+		//e fare delle query di insert sulla sib
+
+		/*
+		 * COME GESTIRE LE CLASSI DEL MODELLO (pass, person, fine, vehicle, sensorData in progetto Sensor)?
+		 * SI DEVONO USARE IN PIU PROGETTI DIVERSI...
+		 * IO PENSAVO DI CREARE UN JAR "model.jar" da importare in ogni progetto, altrimenti copia-incollare i sorgenti
+		 * al pari delle KPI (packages resources e sofia_kp)
+		 * 
+		 * 
+		 * */
+		
+		resp = kpiCore.leave();
+		if(!resp.isConfirmed()){
+			System.err.println("Error leaving the SIB");
+			System.exit(-1);
+		}
+		
+		System.out.println("...Initializer finished");
+	}
+
+}

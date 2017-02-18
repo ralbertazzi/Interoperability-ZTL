@@ -1,0 +1,19 @@
+package Model;
+
+import java.util.Vector;
+
+public class OntologyProvider {
+	public static String toTripleFormat(String param){
+		return "http://ztl#"+param;
+	}
+	
+	public static Vector<String> generateTriple(String instanceName, String property, String value, String objectType){
+		Vector<String> t = new Vector<String>();
+		t.add("http://ztl#"+instanceName);
+		t.add("http://ztl#"+property);
+		t.add(value);
+		t.add("uri"); //subject is always an uri
+		t.add(objectType); //"uri" or "literal"
+		return t;
+	}
+}

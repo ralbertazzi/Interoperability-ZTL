@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="impl.SensorData"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
+<fullyQualifiedTypeName name="javax.swing.JFrame"/>
+<fullyQualifiedTypeName name="impl.Monitor"/>
+<fullyQualifiedTypeName name="javax.swing.JTextArea"/>
+<fullyQualifiedTypeName name="javax.swing.JScrollPane"/>
+<fullyQualifiedTypeName name="javax.swing.JPanel"/>
+<fullyQualifiedTypeName name="impl.Vehicle"/>
+<fullyQualifiedTypeName name="impl.SibSerializable"/>
+<fullyQualifiedTypeName name="sofia_kp.KPICore"/>
+<fullyQualifiedTypeName name="sofia_kp.SIBResponse"/>
+<fullyQualifiedTypeName name="sofia_kp.SSAP_sparql_response"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="java.util.Vector"/>
+<fullyQualifiedTypeName name="java.awt.List"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="Model.Vehicle"/>
+<fullyQualifiedTypeName name="Model.Person"/>
+<fullyQualifiedTypeName name="Model.OntologyProvider"/>
+</qualifiedTypeNameHistroy>

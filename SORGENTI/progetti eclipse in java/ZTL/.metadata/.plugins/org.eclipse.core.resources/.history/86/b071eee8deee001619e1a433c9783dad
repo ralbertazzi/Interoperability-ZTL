@@ -1,0 +1,19 @@
+package impl;
+
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+
+import javax.swing.JFrame;
+
+public class Monitor extends JFrame{
+	private static final long serialVersionUID = 1L;
+	
+	public Monitor(){
+		super("Monitor");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setSize(new Dimension(500, 140));
+		setResizable(false);
+		setLayout(new BorderLayout(10, 10));
+	}
+
+}

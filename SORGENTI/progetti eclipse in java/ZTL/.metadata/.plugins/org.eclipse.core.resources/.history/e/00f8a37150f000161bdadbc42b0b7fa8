@@ -1,0 +1,103 @@
+package Model;
+
+import java.awt.List;
+import java.util.ArrayList;
+import java.util.Vector;
+
+public class Person implements SibSerializable {
+
+//	private String personInstanceName;
+	private String fiscalCode; //uri of Person
+	private String name;
+	private String surname;
+	private String address;
+	private String email;
+	private ArrayList<Vehicle> vehicles = new ArrayList<Vehicle>();
+	
+	public Person(/*int i, */String fiscalCode, String name, String surname, String address, String email, Vehicle vehicle) {
+//		this.personInstanceName = "Person"+i;
+		this.fiscalCode = fiscalCode;
+		this.name = name;
+		this.surname = surname;
+		this.address = address;
+		this.email = email;
+		this.vehicles.add(vehicle);
+	}
+//	public Person(int i) {
+//		this.personInstanceName = "Person"+i;
+//	}
+	
+//	public String getPersonInstanceName() {
+//		return personInstanceName;
+//	}
+//	public void setPersonInstanceName(String personInstanceName) {
+//		this.personInstanceName = personInstanceName;
+//	}
+	public String getFiscalCode() {
+		return fiscalCode;
+	}
+	public void setFiscalCode(String fiscalCode) {
+		this.fiscalCode = fiscalCode;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getSurname() {
+		return surname;
+	}
+	public void setSurname(String surname) {
+		this.surname = surname;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public ArrayList<Vehicle> getVehicles() {
+		return vehicles;
+	}
+	public void setVehicles(ArrayList<Vehicle> vehicles) {
+		if(vehicles!=null)
+			this.vehicles = vehicles;
+	}
+	public void addVehicle(Vehicle v){
+		if(v!=null)
+			this.vehicles.add(v);
+	}
+	
+	@Override
+	public String toString() {
+		return "Person [fiscalCode=" + fiscalCode + ", name=" + name + ", surname=" + surname + ", address=" + address
+				+ ", email=" + email + ", vehicles=" + vehicles + "]";
+	}
+
+	public Vector<Vector<String>> toTriple(){
+		Vector<Vector<String>> triples = new Vector<Vector<String>>();
+//		triples.add(OntologyProvider.generateTriple(getPersonInstanceName(), "hasFiscalCode", getFiscalCode(), "literal"));
+		triples.add(OntologyProvider.generateTriple(getFiscalCode(), "hasName", getName(), "literal"));
+		triples.add(OntologyProvider.generateTriple(getFiscalCode(), "hasSurname", getSurname(), "literal"));
+		triples.add(OntologyProvider.generateTriple(getFiscalCode(), "hasAddress", getAddress(), "literal"));
+		triples.add(OntologyProvider.generateTriple(getFiscalCode(), "hasEmail", getEmail(), "literal"));
+		if(!getVehicles().isEmpty()){
+			for(Vehicle v:getVehicles()){
+				if(v!=null)
+					triples.add(OntologyProvider.generateTriple(getFiscalCode(), "hasVehicle", v.getPlate(), "uri"));
+			}
+		}
+		
+		
+		
+		return triples;
+	}
+	
+}

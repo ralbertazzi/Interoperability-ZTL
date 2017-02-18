@@ -1,0 +1,59 @@
+package impl;
+
+import java.util.Vector;
+
+import Model.Person;
+import Model.Vehicle;
+import sofia_kp.KPICore;
+import sofia_kp.SIBResponse;
+import sofia_kp.SSAP_sparql_response;
+
+public class InitializerMain {
+
+	public static void main(String[] args) {
+		System.out.println("Initializer started...");
+		
+		//sib instance
+		KPICore kpiCore = new KPICore("localhost", 7702, "ztl");
+		SIBResponse resp = null;
+		
+		//join
+		resp = kpiCore.join();
+		if(!resp.isConfirmed()){
+			System.err.println("Error joining the SIB");
+			System.exit(-1);
+		}
+		
+		//---INIT DATA SIB---
+		for(int i=1; i<=10; i++){
+			Vehicle v = new Vehicle("AA"+i+i+i+"AA", "Private", null);
+			
+			resp = kpiCore.insert(v.toTriple());
+			if(!resp.isConfirmed()){
+				System.err.println("Insert vehicle "+i+" failed");
+			}else{
+				System.out.println("Insert vehicle "+i+" successfull");
+			}
+			
+			Person p = new Person("personFiscalCode"+i, "Name"+i, "Surname"+i, "Addr"+i, "Mail"+i, v);
+			
+			resp = kpiCore.insert(p.toTriple());
+			if(!resp.isConfirmed()){
+				System.err.println("Insert person "+i+" failed");
+			}else{
+				System.out.println("Insert person "+i+" successfull");
+			}
+			
+		}
+		
+		//leave		
+		resp = kpiCore.leave();
+		if(!resp.isConfirmed()){
+			System.err.println("Error leaving the SIB");
+			System.exit(-1);
+		}
+		
+		System.out.println("...Initializer finished");
+	}
+
+}

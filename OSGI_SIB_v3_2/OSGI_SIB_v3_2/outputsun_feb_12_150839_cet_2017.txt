@@ -1,0 +1,2 @@
+runFIFOProducer:1 MESSAGE RECEIVED: <SSAP_message><message_type>REQUEST</message_type><transaction_type>JOIN</transaction_type><transaction_id>1</transaction_id><node_id>be82847a-94f6-4fde-a61f-2ecfa55e1813</node_id><space_id>X</space_id></SSAP_message>
+tr=JOIN, format=, qtype=, ssap: <SSAP_message><transaction_type>JOIN</transaction_type><message_type>CONFIRM</message_type><transaction_id>1</transaction_id><node_id>be82847a-94f6-4fde-a61f-2ecfa55e1813</node_id><space_id>RDF_SIB_ALf3</space_id><parameter name="status">m3:Success</parameter></SSAP_message>

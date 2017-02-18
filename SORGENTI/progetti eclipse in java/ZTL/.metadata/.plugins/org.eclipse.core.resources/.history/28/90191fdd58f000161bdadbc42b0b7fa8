@@ -1,0 +1,58 @@
+package Model;
+
+import java.text.SimpleDateFormat;
+import java.util.Vector;
+
+public class Pass implements SibSerializable {
+
+	private long deadline;
+	private long ticket;
+	private String type;
+
+	public Pass() {
+		super();
+	}
+
+	public Pass(long deadline, long ticket, String type) {
+		super();
+		this.deadline = deadline;
+		this.ticket = ticket;
+		this.type = type;
+	}
+
+	@Override
+	public String toString() {
+		SimpleDateFormat sdfDate = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+		return "Pass [deadline=" + sdfDate.format(deadline) + ", ticket=" + ticket + ", type=" + type + "]";
+	}
+
+	public long getDeadline() {
+		return deadline;
+	}
+
+	public void setDeadline(long deadline) {
+		this.deadline = deadline;
+	}
+
+	public long getTicket() {
+		return ticket;
+	}
+
+	public void setTicket(long ticket) {
+		this.ticket = ticket;
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
+
+	public Vector<String> toTriple() {
+		// TODO serialization method -> RICORDA CHE RICORSIVAMENTE DEVE INVOCARE
+		// LA toTriple() dei campi non literal
+		throw new IllegalArgumentException("not implemented yet");
+	}
+}

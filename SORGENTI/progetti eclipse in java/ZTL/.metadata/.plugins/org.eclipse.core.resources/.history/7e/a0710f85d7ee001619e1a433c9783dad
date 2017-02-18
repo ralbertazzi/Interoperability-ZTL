@@ -1,0 +1,96 @@
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import javax.swing.BorderFactory;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class Sensor extends JFrame implements ActionListener {
+	private static final long serialVersionUID = 1L;
+	
+	private JLabel lblPlate = new JLabel("Plate:");
+	private JLabel lblCategory = new JLabel("Category:");
+	private JLabel lblAccessGate = new JLabel("Access Gate:");
+	private JTextField txtPlate = new JTextField();
+	private JComboBox<String> cboCategory = new JComboBox<String>();
+	private JComboBox<String> cboAccessGate = new JComboBox<String>();
+	private JButton btnSubmit = new JButton("Enter Zone");
+	
+	private JPanel pan1 = new JPanel(new GridLayout(1, 2, 10, 10));
+	private JPanel pan2 = new JPanel(new GridLayout(1, 2, 10, 10));
+	private JPanel pan3 = new JPanel(new GridLayout(1, 2, 10, 10));
+	private JPanel pan4 = new JPanel(new BorderLayout(10, 10));
+	private JPanel upperPanel = new JPanel(new BorderLayout(10, 10));
+	private JPanel lowerPanel = new JPanel(new BorderLayout(10, 10));
+	private JPanel mainPanel = new JPanel(new BorderLayout(10, 10));
+	
+
+	public Sensor() {
+		super("Entering sensor");
+
+		cboAccessGate.addItem("1");
+		cboAccessGate.addItem("2");
+		cboAccessGate.setSelectedIndex(0);
+		
+		cboCategory.addItem("Taxi");
+		cboCategory.addItem("Resident vehicle");
+		cboCategory.addItem("Bus");
+		cboCategory.addItem("Private car");
+		cboCategory.addItem("Motorbike");
+		cboCategory.setSelectedIndex(0);
+		
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setSize(new Dimension(500, 200));
+		setResizable(false);
+		setLayout(new BorderLayout(10, 10));
+		
+		btnSubmit.addActionListener(this);
+		
+		pan1.add(lblPlate);
+		pan1.add(txtPlate);
+		pan2.add(lblCategory);
+		pan2.add(cboCategory);
+		pan3.add(lblAccessGate);
+		pan3.add(cboAccessGate);
+		pan4.add(btnSubmit);
+		
+		upperPanel.add(pan1, BorderLayout.NORTH);
+		upperPanel.add(pan2, BorderLayout.CENTER);
+		upperPanel.add(pan3, BorderLayout.SOUTH);
+		lowerPanel.add(pan4, BorderLayout.CENTER);
+		
+		mainPanel.add(upperPanel, BorderLayout.NORTH);
+		mainPanel.add(lowerPanel, BorderLayout.SOUTH);
+		
+		mainPanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+		add(mainPanel);
+		
+//		this.pack();
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) { //button click
+		SimpleDateFormat sdfDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+	    Date now = new Date();
+		
+		StringBuilder sb = new StringBuilder();
+		sb.append("Sending =>\n");
+		sb.append("Plate = "+txtPlate.getText()+"\n");
+		sb.append("Category = "+cboCategory.getSelectedItem().toString()+"\n");
+		sb.append("Access Gate = "+cboAccessGate.getSelectedItem().toString()+"\n");
+		sb.append("Time = "+sdfDate.format(now)+"\n");
+
+		JOptionPane.showMessageDialog(null,sb.toString());
+	}
+
+}

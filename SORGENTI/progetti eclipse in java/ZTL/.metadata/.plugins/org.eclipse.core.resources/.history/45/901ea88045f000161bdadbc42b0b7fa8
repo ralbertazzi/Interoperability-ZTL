@@ -1,0 +1,23 @@
+package impl;
+
+public class InitializerMain {
+
+	public static void main(String[] args) {
+		System.out.println("Initializer started...");
+		//TODO creare un centinaio di coppie persona-veicolo, generare le triple con toTriple()
+		//e fare delle query di insert sulla sib
+
+		/*
+		 * COME GESTIRE LE CLASSI DEL MODELLO (pass, person, fine, vehicle, sensorData in progetto Sensor)?
+		 * SI DEVONO USARE IN PIU PROGETTI DIVERSI...
+		 * IO PENSAVO DI CREARE UN JAR "model.jar" da importare in ogni progetto, altrimenti copia-incollare i sorgenti
+		 * al pari delle KPI (packages resources e sofia_kp)
+		 * 
+		 * 
+		 * */
+		
+		
+		System.out.println("...Initializer finished");
+	}
+
+}

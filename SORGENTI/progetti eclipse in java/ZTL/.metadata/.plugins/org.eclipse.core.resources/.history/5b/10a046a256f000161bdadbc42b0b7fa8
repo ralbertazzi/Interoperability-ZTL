@@ -1,0 +1,91 @@
+package impl;
+
+import java.util.Vector;
+
+import Model.Person;
+import Model.Vehicle;
+import sofia_kp.KPICore;
+import sofia_kp.SIBResponse;
+import sofia_kp.SSAP_sparql_response;
+
+public class InitializerMain {
+
+	public static void main(String[] args) {
+		System.out.println("Initializer started...");
+		
+		KPICore kpiCore = new KPICore("localhost", 7702, "ztl");
+		SIBResponse resp = null;
+		
+		resp = kpiCore.join();
+		if(!resp.isConfirmed()){
+			System.err.println("Error joining the SIB");
+			System.exit(-1);
+		}
+		
+		//---INIT DATA SIB---
+		Vehicle v1 = new Vehicle("AA111AA", "Private", null);
+		Vehicle v2 = new Vehicle("BB111BB", "Resident", null);
+		Vehicle v3 = new Vehicle("CC111CC", "Taxi", null);
+		Vehicle v4 = new Vehicle("DD111DD", "Bus", null);
+		Vehicle v5 = new Vehicle("EE111EE", "Taxi", null);
+		Vehicle v6 = new Vehicle("FF111FF", "Motorbike", null);
+		
+		Person p1 = new Person("personFiscalCode1", "John", "Smith", "Trafalgar Square", "js@gmail.com", v1);
+		Person p2 = new Person("personFiscalCode2", "Carl", "Green", "5th Avenue", "cg@gmail.com", v2);
+		p2.addVehicle(v5);
+		Person p3 = new Person("personFiscalCode3", "Rick", "Blacks", "Viale del Risorgimento", "rb@gmail.com", v3);
+		Person p4 = new Person("personFiscalCode4", "Dinah", "Reds", "London Bridge", "dr@gmail.com", v4);
+		p4.addVehicle(v6);
+		
+		
+		
+		resp = kpiCore.insert(p.toTriple());
+		if(!resp.isConfirmed()){
+			System.err.println("Insert failed");
+		}else{
+			System.out.println("Insert successfull");
+		}
+		
+//		// De f i n e the que r y
+//		String query = "SELECT ? s ?p ?o WHERE f ? s ?p ?o g" ;
+//		// Ex e cut e the que r y
+//		resp = kpiCore.querySPARQL(query) ;
+//		// Check the r e s u l t s
+//		if(!resp.isConfirmed()){
+//			System.err.println("Sparql error");
+//		}else{
+//			Vector<String[]> row = null;
+//			SSAP_sparql_response sqr = resp.sparqlquery_results;
+//			
+//			while(sqr.hasNext()){
+//				sqr.next();
+//				row = sqr.getRow();
+//				for(String[] r : row){
+//					System.out.println(r[0] + ", "+r[1]+", "+r[2]);
+//				}
+//			}
+//		}
+//		
+		
+		//TODO creare un centinaio di coppie persona-veicolo, generare le triple con toTriple()
+		//e fare delle query di insert sulla sib
+
+		/*
+		 * COME GESTIRE LE CLASSI DEL MODELLO (pass, person, fine, vehicle, sensorData in progetto Sensor)?
+		 * SI DEVONO USARE IN PIU PROGETTI DIVERSI...
+		 * IO PENSAVO DI CREARE UN JAR "model.jar" da importare in ogni progetto, altrimenti copia-incollare i sorgenti
+		 * al pari delle KPI (packages resources e sofia_kp)
+		 * 
+		 * 
+		 * */
+		
+		resp = kpiCore.leave();
+		if(!resp.isConfirmed()){
+			System.err.println("Error leaving the SIB");
+			System.exit(-1);
+		}
+		
+		System.out.println("...Initializer finished");
+	}
+
+}

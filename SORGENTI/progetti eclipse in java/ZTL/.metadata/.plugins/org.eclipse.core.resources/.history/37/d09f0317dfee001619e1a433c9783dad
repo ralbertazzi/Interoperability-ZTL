@@ -1,0 +1,54 @@
+package impl;
+
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+import java.awt.GridLayout;
+
+import javax.swing.BorderFactory;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+
+public class Monitor extends JFrame{
+	private static final long serialVersionUID = 1L;
+	
+	private JLabel lblVehicles = new JLabel("ALL VEHICLES");
+	private JLabel lblFines = new JLabel("ALL FINES");
+	private JScrollPane v;
+	private JScrollPane f;
+	private JTextArea  txtVehicles = new JTextArea(15,15);
+	private JTextArea  txtFines = new JTextArea(15,15);
+	
+	private JPanel pan1 = new JPanel(new GridLayout(1, 2, 10, 10));
+	private JPanel pan2 = new JPanel(new GridLayout(1, 2, 10, 10));
+	private JPanel mainPanel = new JPanel(new BorderLayout(10, 10));
+	
+	public Monitor(){
+		super("Monitor");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setSize(new Dimension(500, 140));
+		setResizable(false);
+		setLayout(new BorderLayout(10, 10));
+		
+		f = new JScrollPane(txtFines);
+        f.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+        
+        v = new JScrollPane(txtVehicles);
+        f.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+        
+        pan1.add(lblFines);
+        pan1.add(lblVehicles);
+        pan2.add(f);
+        pan2.add(v);
+        
+        mainPanel.add(pan1, BorderLayout.NORTH);
+		mainPanel.add(pan2, BorderLayout.CENTER);
+		
+		mainPanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+        add(mainPanel);
+		
+	}
+
+}

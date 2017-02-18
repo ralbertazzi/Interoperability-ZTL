@@ -1,0 +1,10 @@
+package impl;
+
+public class MonitorMain {
+
+	public static void main(String[] args) {
+		System.out.println("helloMonitor");
+
+	}
+
+}
