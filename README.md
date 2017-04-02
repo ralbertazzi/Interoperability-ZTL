@@ -1,3 +1,4 @@
+
 # Interoperability-ZTL
 
 Theoretical smart implementation of a limited traffic zone scenario, based on semantic Web and interoperable IoT devices.
@@ -10,3 +11,8 @@ The project involved various technologies, including:
 - Sparql as query language for interacting with the SIB;
 
 - Java/Android to realize simple smart devices for testing purposes.
+
+*Albertazzi Riccardo<br />
+Andraghetti Lorenzo<br />
+Berlati Alessandro<br />
+Corni Gabriele*
